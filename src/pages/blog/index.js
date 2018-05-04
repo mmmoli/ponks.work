@@ -11,12 +11,10 @@ export default class IndexPage extends React.Component {
       <section className="section">
         <div className="container">
           <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">
-              Architectural Designer, Freelance
-            </h1>
+            <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
           </div>
           {posts
-            .filter(post => post.node.frontmatter.templateKey === 'project')
+            .filter(post => post.node.frontmatter.templateKey === 'blog-post')
             .map(({ node: post }) => (
               <div
                 className="content"
@@ -55,7 +53,7 @@ IndexPage.propTypes = {
 }
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query BlogIndexQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
