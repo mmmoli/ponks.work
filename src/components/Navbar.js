@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 const Navbar = () => (
-  <nav className="navbar is-fixed-top">
+  <nav className="navbar" role="navigation" aria-label="main navigation">
     <div className="container">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item">
