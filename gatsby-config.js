@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: `Ponk – Freelance Architectural Designer`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    `gatsby-plugin-react-next`,
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
