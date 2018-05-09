@@ -9,7 +9,7 @@ import '../styles/all.sass'
 const TemplateWrapper = ({ children }) => [
   <Helmet key="layout-helmet" title="Home | Gatsby + Netlify CMS" />,
   <Navbar key="layout-nav" />,
-  children(),
+  <div key="layout-content">{children()}</div>,
   <Footer key="layout-footer" />,
 ]
 
