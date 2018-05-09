@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Stat } from '../components/tags'
+import { Button } from 'reactstrap';
 
 const IndexPage = () => [
   <section className="hero is-medium is-warning" key="index-hero">
@@ -10,6 +11,7 @@ const IndexPage = () => [
           <div className="column is-5 m-b-lg">
             <h1 className="title is-1">Ponk</h1>
             <h2 className="subtitle">Freelance Architectural Designer</h2>
+            <Button color="danger">Danger!</Button>
           </div>
         </div>
         <div className="columns is-centered has-text-centered">
