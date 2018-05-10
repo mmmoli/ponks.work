@@ -6,9 +6,11 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import '../styles/all.sass'
 
-const TemplateWrapper = ({ children }) => [
+const isRestrictedNav = location => location.pathname.split('/l/').length > 1
+
+const TemplateWrapper = ({ children, location }) => [
   <Helmet key="layout-helmet" title="Home | Gatsby + Netlify CMS" />,
-  <Navbar key="layout-nav" />,
+  <Navbar key="layout-nav" restricted={isRestrictedNav(location)} />,
   <div key="layout-content">{children()}</div>,
   <Footer key="layout-footer" />,
 ]
