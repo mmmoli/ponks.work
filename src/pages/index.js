@@ -1,15 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Stat } from '../components/tags'
 import Banner from '../components/Banner'
+import { Container } from 'reactstrap'
 
 const IndexPage = () => [
-  <section key="index-hero">
-    <Banner heading={`Ponk`} />
-  </section>,
-  <section key="index-stats">
+  <Banner heading={`Ponk`} key="index-hero" />,
+  <Container key="index-stats">
     <h2>Testimonials</h2>
-  </section>,
+  </Container>,
 ]
 
 IndexPage.propTypes = {}
