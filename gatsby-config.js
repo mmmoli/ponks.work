@@ -1,10 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Ponk – Freelance Architectural Designer`,
+    siteUrl: `https://www.ponks.work`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-react-next`,
+    `gatsby-plugin-sitemap`,
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
