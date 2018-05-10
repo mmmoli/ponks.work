@@ -1,14 +1,23 @@
 import React from 'react'
-import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
+import {
+  Navbar,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  Container,
+} from 'reactstrap'
 
 const MyNav = () => (
   <Navbar color="light" light expand="md">
-    <NavbarBrand href="/">Ponks.work</NavbarBrand>
-    <Nav className="ml-auto" navbar>
-      <NavItem>
-        <NavLink href="/components/">Components</NavLink>
-      </NavItem>
-    </Nav>
+    <Container>
+      <NavbarBrand href="/">Ponks.work</NavbarBrand>
+      <Nav navbar>
+        <NavItem>
+          <NavLink href="/projects/">Projects</NavLink>
+        </NavItem>
+      </Nav>
+    </Container>
   </Navbar>
 )
 
