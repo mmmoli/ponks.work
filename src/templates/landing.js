@@ -1,51 +1,37 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
-import Content, { HTMLContent } from '../components/Content'
-import { Container } from 'reactstrap'
+import { Container, Row, Col } from 'reactstrap'
 import Banner from '../components/Banner'
 
-export const ProjectTemplate = ({
-  content,
-  contentComponent,
-  description,
-  tags,
-  title,
-  helmet,
-}) => {
-  const PostContent = contentComponent || Content
+export const LandingTemplate = ({ content, description, title }) => (
+  <article>
+    <Helmet>
+      <title children={title} />
+      <meta name="description" content={description} />
+    </Helmet>
+    <Banner heading={title} />
+    <Container className="content">
+      <Row className="justify-content-md-center">
+        <Col md="10" lg="8" dangerouslySetInnerHTML={{ __html: content }} />
+      </Row>
+    </Container>
+  </article>
+)
 
-  return (
-    <article>
-      <Helmet>
-        <title children={title} />
-        <meta name="description" content={description} />
-      </Helmet>
-      <Banner heading={title} />
-      <Container>
-        <p>{description}</p>
-        <PostContent content={content} />
-      </Container>
-    </article>
-  )
-}
-
-ProjectTemplate.propTypes = {
+LandingTemplate.propTypes = {
   content: PropTypes.string.isRequired,
-  contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
 }
 
-const Project = ({ data }) => {
+const Landing = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <ProjectTemplate
+    <LandingTemplate
       content={post.html}
-      contentComponent={HTMLContent}
       description={post.frontmatter.description}
       tags={post.frontmatter.tags}
       title={post.frontmatter.title}
@@ -53,13 +39,13 @@ const Project = ({ data }) => {
   )
 }
 
-Project.propTypes = {
+Landing.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default Project
+export default Landing
 
 export const pageQuery = graphql`
   query LandingByID($id: String!) {

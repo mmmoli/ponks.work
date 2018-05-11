@@ -12,7 +12,7 @@ import {
 const MyNav = ({ restricted }) => (
   <Navbar color="light" light expand="md">
     <Container>
-      <NavbarBrand href={!restricted ? '/' : null}>Ponks.work</NavbarBrand>
+      <NavbarBrand href={!restricted ? '/' : null}>Ponks.work logo</NavbarBrand>
       {!restricted ? (
         <Nav navbar>
           <NavItem>
