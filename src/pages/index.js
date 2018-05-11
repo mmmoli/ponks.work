@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Banner from '../components/Banner'
 import { Container, Jumbotron, Row, Col } from 'reactstrap'
 import Project from '../components/ProjectCard'
+import Quote from '../components/Quote'
 
 const IndexPage = () => [
   <Jumbotron key="index-hero">
@@ -57,6 +58,11 @@ const IndexPage = () => [
         </Col>
       </Row>
     </Container>
+  </section>,
+  <section key="index-testimonials">
+    <Quote />
+    <Quote />
+    <Quote />
   </section>,
 ]
 
