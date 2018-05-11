@@ -60,9 +60,21 @@ const IndexPage = () => [
     </Container>
   </section>,
   <section key="index-testimonials">
-    <Quote />
-    <Quote />
-    <Quote />
+    <Quote
+      person="Paolo Memoli"
+      organisation="100 Shapes"
+      text="I think it's great!"
+    />
+    <Quote
+      person="Paolo Memoli"
+      organisation="100 Shapes"
+      text="I think it's great!"
+    />
+    <Quote
+      person="Paolo Memoli"
+      organisation="100 Shapes"
+      text="I think it's great!"
+    />
   </section>,
 ]
 

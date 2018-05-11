@@ -1,15 +1,19 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Quote = () => (
+const Quote = ({ text, person, organisation }) => (
   <blockquote className="blockquote text-center">
-    <p className="mb-0">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
-      erat a ante.
-    </p>
+    <p className="mb-0" children={text} />
     <footer className="blockquote-footer">
-      Someone famous in <cite title="Source Title">Source Title</cite>
+      {person}, <cite title="Source Title" children={organisation} />
     </footer>
   </blockquote>
 )
+
+Quote.propTypes = {
+  text: PropTypes.string.isRequired,
+  organisation: PropTypes.string.isRequired,
+  person: PropTypes.string.isRequired,
+}
 
 export default Quote
