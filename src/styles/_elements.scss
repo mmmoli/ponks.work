@@ -1,4 +1,25 @@
-.content img {
+.PW-Content img {
   width: 100%;
   height: auto;
+}
+
+$overlap: 10em;
+
+.PW-Banner {
+  background-image: linear-gradient(141deg,#ffaf24 0,#ffdd57 71%,#fffa70 100%);
+
+  &__jumbo > *:first-child {
+    min-height: 46em;
+    height: 80vh;
+    padding-bottom: $overlap !important;
+  }
+
+  &__jumbo + section {
+    margin-top: -$overlap;
+  }
+}
+
+.PW-ProjectCard > .card-body {
+  position: absolute;
+  bottom: 0;
 }

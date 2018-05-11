@@ -12,7 +12,7 @@ export const LandingTemplate = ({ content, description, title }) => (
       <meta name="description" content={description} />
     </Helmet>
     <Banner heading={title} />
-    <Container className="content">
+    <Container className="PW-Content">
       <Row className="justify-content-md-center">
         <Col md="10" lg="8" dangerouslySetInnerHTML={{ __html: content }} />
       </Row>
